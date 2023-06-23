@@ -497,3 +497,7 @@ img {
         font-size: 11px
     }
 }
+
+.about:hover {
+    background-color: red;
+}
