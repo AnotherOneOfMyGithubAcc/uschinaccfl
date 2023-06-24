@@ -30,20 +30,51 @@ resources.addEventListener("mouseout", () => {
   resources_ul.style.visibility = "hidden";
 });
 
+// let slideIndex = 0;
+// slideShow()
 
+// function slideShow() {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+
+// for (i = 0; i < slides.length; i++) {
+//   slides[i].style.display = "none";
+// }
+
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}
+
+//   slides[slideIndex-1].style.display = "block";
+//   setTimeout(slideShow(), 2000)
+// }
+
+// show()
+
+// function show() {
+//   let s = document.querySelectorAll(".mySlides")
+//   for (var i = 1; i < s.length; i++) {
+//     s[i - 1].setAttribute('style', s[i - 1].getAttribute('style')+'; display: none !important');
+//     s[i].setAttribute('style', s[i].getAttribute('style')+'; display: block !important');
+//   }
+//   setTimeout(show(), 2000)
+// }
 
 let slideIndex = 0;
+showSlides();
 
-function slideShow() {
+function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
+
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
   }
 
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex - 1].style.display = "block";
 
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(slideShow(), 2500)
+  setTimeout(showSlides, 2000);
 }
