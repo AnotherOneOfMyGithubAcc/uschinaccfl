@@ -48,25 +48,21 @@ li[data-data-id="dataItem-jgmm4ayh"] ul li {
 }
 
 
-#img1 {
-    width: 1922px;
+.HT5ybB {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    height: 800px; 
+    margin-bottom: 100px;
+}
+
+.HT5ybB img {
+    width: 80%;
     height: 477px;
+    vertical-align: middle !important;
 }
 
-#img2 {
-    width: 1922px;
-    height: 607px;
-}
-
-#img3 {
-    width: 1922px;
-    height: 607px;
-}
-
-#img4 {
-    width: 1922px;
-    height: 477px;
-}
 
 * {
     box-sizing: border-box;
