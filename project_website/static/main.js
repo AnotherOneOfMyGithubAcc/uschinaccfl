@@ -30,8 +30,6 @@ resources.addEventListener("mouseout", () => {
   resources_ul.style.visibility = "hidden";
 });
 
-
-
 // let slideIndex = 0;
 // slideShow()
 
@@ -39,14 +37,14 @@ resources.addEventListener("mouseout", () => {
 //   let i;
 //   let slides = document.getElementsByClassName("mySlides");
 
-  // for (i = 0; i < slides.length; i++) {
-  //   slides[i].style.display = "none";  
-  // }
+// for (i = 0; i < slides.length; i++) {
+//   slides[i].style.display = "none";
+// }
 
 //   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1}    
+//   if (slideIndex > slides.length) {slideIndex = 1}
 
-//   slides[slideIndex-1].style.display = "block";  
+//   slides[slideIndex-1].style.display = "block";
 //   setTimeout(slideShow(), 2000)
 // }
 
@@ -60,3 +58,23 @@ resources.addEventListener("mouseout", () => {
 //   }
 //   setTimeout(show(), 2000)
 // }
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+
+  setTimeout(showSlides, 2000);
+}
